@@ -1,0 +1,28 @@
+1. Program Analysis : Binary Search Tree
+
+	Insert :	Create a new Node and fill it
+				Find Correct PARENT
+				Place it
+				Twist :	If Root is NULL
+	Display :	Twist :	If Root is NULL
+				Use Recurtion
+				-------------------------------------------------------------------------
+				|    For inOrder		|    For PreOrder		|	For PostOredr		|
+				|-----------------------|-----------------------|-----------------------|
+				|  f(Root->Left)		|	Show Root->Element	| 	f(Root->Left)		|
+				|  Show Root->Element	|	f(Root->Left)		|	f(Root->Right)		|
+				|  f(Root->Right)		|	f(Root->Right)		| 	Show Root->Element	|
+				-------------------------------------------------------------------------
+	Delete :	(On the basis of given value)
+				Twist 1 :	If both Root->Left and Root->Right is NULL
+				Find correct (POSITION, PARENT)
+				If POSITION is
+				------------------------------------------------------------------------------------
+				|       A Leaf		  |     Having 1 Child	   |	     Having 2 Childs		   |
+				|---------------------|------------------------|-----------------------------------|
+				|  					  |	Bypass POSITION and    | Find and use POSITIONS's inOrder  |
+				| Delete it straight  |	set (POSITION's Child) | (SUCCESSOR, SUCCESSOR_PARENT)	   |
+				| away	  			  |	as (PARENT's Child)	   | Twist 2 : What if POSITION->Right |
+				|					  |						   | is the inOrder successor          |
+				------------------------------------------------------------------------------------
+
